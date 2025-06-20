@@ -1,0 +1,5 @@
+df['review_length'] = df['review'].apply(lambda x: len(x.split()))
+plt.figure(figsize=(7, 4))
+sns.histplot(df['review_length'], bins=50, kde=True, color='skyblue')
+plt.title("Review Length Distribution")
+plt.show()
